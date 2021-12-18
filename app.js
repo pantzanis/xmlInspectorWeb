@@ -1,3 +1,24 @@
+function addElement() {
+  // erstelle ein neues div Element
+  // und gib ihm etwas Inhalt
+  var newDiv = document.createElement("div");
+  var newContent = document.createTextNode("Hi there and greetings!");
+  newDiv.appendChild(newContent); // füge den Textknoten zum neu erstellten div hinzu.
+
+  // füge das neu erstellte Element und seinen Inhalt ins DOM ein
+  document.getElementById("drop_zone").appendChild(newDiv);
+  console.log("here I am ");
+}
+
+function deleteElementById(id) {
+  try {
+    var elem = document.getElementById(id);
+    elem.parentNode.removeChild(elem);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 function dropHandler(ev) {
   console.log("File(s) dropped");
 
@@ -33,6 +54,10 @@ function dropHandler(ev) {
                   books[i].getElementsByTagName("author")[0].innerHTML
                 );
               }
+
+              //here I can add and remove elements to show the results:
+              // addElement();
+              // deleteElementById("dropBoxText");
             },
             false
           );
