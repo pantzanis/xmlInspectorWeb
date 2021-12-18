@@ -7,7 +7,6 @@ function addElement() {
 
   // füge das neu erstellte Element und seinen Inhalt ins DOM ein
   document.getElementById("drop_zone").appendChild(newDiv);
-  console.log("here I am ");
 }
 
 function deleteElementById(id) {
