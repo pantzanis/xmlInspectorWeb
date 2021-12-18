@@ -1,5 +1,10 @@
 #drop_zone {
-  border: 3px dashed rgb(192, 238, 192);
+  background: rgb(245, 243, 243);
+  height: 100vh;
+}
+
+#dropBoxText {
+  border: 1px dashed rgb(0, 14, 0);
   position: absolute;
   top: 50%;
   left: 50%;

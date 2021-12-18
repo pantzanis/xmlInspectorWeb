@@ -44,6 +44,7 @@ function dropHandler(ev) {
   } else {
     // Use DataTransfer interface to access the file(s)
     for (var i = 0; i < ev.dataTransfer.files.length; i++) {
+      console.log("the browser does not support DataTransferItemList!");
       console.log(
         "... file[" + i + "].name = " + ev.dataTransfer.files[i].name
       );
