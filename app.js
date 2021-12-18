@@ -23,8 +23,16 @@ function dropHandler(ev) {
               var parser = new DOMParser();
               var xmlDoc = parser.parseFromString(reader.result, "text/xml");
               console.log(
+                "first tile is: ",
                 xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue
               );
+              var books = xmlDoc.getElementsByTagName("book");
+              for (i = 0; i < books.length; i++) {
+                console.log(
+                  "in the for loop: ",
+                  books[i].getElementsByTagName("author")[0].innerHTML
+                );
+              }
             },
             false
           );
